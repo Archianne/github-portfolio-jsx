@@ -38,6 +38,12 @@ const NavBar = () => {
         <FaRegBell className="nav-icon bell-icon" />
         <HiOutlinePlus className="nav-icon plus-icon" />
         <AiOutlineCaretDown className="nav-icon arrow-icon" />
+        <img
+          src="https://github.com/Archianne.png"
+          alt="Archianne"
+          className="git-icon"
+        />
+        <AiOutlineCaretDown className="nav-icon arrow-icon" />
       </div>
     </NavBarStyle>
   );
@@ -61,9 +67,12 @@ const NavBarStyle = styled.nav`
 .nav-left {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 90%;
 
 input {
     outline: none;
+    margin: 0 16px;
 }
 
 input[type=search] {
@@ -82,12 +91,13 @@ input[type=search] {
 	background: #24292E url("https://github.githubassets.com/images/search-key-slash.svg") no-repeat right 8px center;
 	border: solid 1px #444d56;
 	border-radius: 6px;
-	width: 272px;
+	width: 243px;
     min-height: 28px;
-    padding: 0 19px;
+    padding: 0 12px;
     font-weight: 400;
     max-width: 100%;
 	transition: all .5s;
+    line-height: 20px
 }
 
 input[type=search]:focus {
@@ -114,18 +124,48 @@ input:-moz-placeholder {
 }
 
 .nav-link {
-    color: blue;
-    font-size:20px;
-    display: none;
-}
-
-.logo-icon {
-    width: 32px;
-    height: 32px
+    color: #e1e4e8;
+    margin-right: 16px;
+    font-weight: 645;
+    text-decoration: none;
 }
 
 a {
     color: white;
 }
 
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+.arrow-icon {
+    width: 10px;
+    height: 10px;
+    margin-right: 16px;
+    margin-left: 3px;
+}
+
+.bell-icon {
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.plus-icon {
+    width: 20px;
+    height: 20px;
+}
+}
+
+.logo-icon {
+    width: 32px;
+    height: auto;
+    margin-top: 3px;
+}
+
+.git-icon {
+    width: 20px;
+    border-radius: 50%;
+}
 `;
