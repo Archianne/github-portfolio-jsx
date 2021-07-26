@@ -8,8 +8,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
 body {
-  background-color: #fff;
-  color: #24292e;
+  background-color: ${props => props.theme.bg};
+  color: ${props => props.theme.mainColor};
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   line-height: 1.5;

@@ -1,6 +1,7 @@
 import useFetch from "../Hooks/useFetch";
 import styled from "styled-components";
 import Button from "../Styled/button";
+import Line from "../Styled/line";
 
 const SideBar = () => {
   const URL = `https://api.github.com/users/Archianne`;
@@ -17,7 +18,7 @@ const SideBar = () => {
       <p>{value.company}</p>
       <p>{value.location}</p>
       <p>{value.blog}</p>
-      <hr />
+      <Line />
       <h4>Organizations</h4>
       <p>{value.company}</p>
     </StyledSideBar>
@@ -29,7 +30,6 @@ export default SideBar;
 const StyledSideBar = styled.aside`
   display: flex;
   flex-direction: column;
-  overflow-wrap: break-word;  
   line-height: 21px;
   width: 25%;
   margin-top: 40px;
@@ -45,7 +45,7 @@ const StyledSideBar = styled.aside`
     font-style: normal;
     font-weight: 300;
     line-height: 24px;
-    color: ${(props) => props.theme.primaryColors.secondColor};
+    color: ${(props) => props.theme.secondColor};
   }
 
   img {
@@ -53,4 +53,12 @@ const StyledSideBar = styled.aside`
     border-radius: 50%;
     align-self: center;
   }
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  
 `;

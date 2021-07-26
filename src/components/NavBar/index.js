@@ -4,13 +4,11 @@ import { AiOutlineCaretDown } from "react-icons/ai";
 import { HiOutlinePlus } from "react-icons/hi";
 import styled from "styled-components";
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <StyledNavBar>
       <div className="nav-left">
-        <a href="/" className="logo-link">
-          <ImGithub className="logo-icon" />
-        </a>
+        <ImGithub className="logo-icon" onClick={props.changeTheme} />
 
         <form>
           <input
@@ -57,7 +55,7 @@ const StyledNavBar = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #24292e;
+  background: ${(props) => props.theme.navBg};
   padding: 16px 24px;
   line-height: 21px;
   height: 62px;
@@ -161,7 +159,6 @@ a {
 .logo-icon {
   width: 32px;
   height: auto;
-  margin-top: 3px;
 }
 
 .git-icon {
