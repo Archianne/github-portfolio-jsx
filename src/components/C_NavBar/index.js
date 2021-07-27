@@ -45,7 +45,7 @@ const CNavBar = () => {
             }`}
             key={index}
           >
-            <a href={"/" + tab.path} className="link">
+            <a href={"/#/" + tab.path} className="link">
               <tab.icon className="icon" />
 
               <p className="items">{tab.title}</p>
