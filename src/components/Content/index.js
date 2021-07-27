@@ -11,9 +11,9 @@ const Content = () => {
       <Router>
         <Switch>
           <Route path="/" component={Home} exact></Route>
-          <Route path="/skills" component={Skills} exact></Route>
-          <Route path="/repositories" component={Repositories} exact></Route>
-          <Route path="/contact" component={Contact} exact></Route>
+          <Route path="/#/skills" component={Skills} exact></Route>
+          <Route path="/#/repositories" component={Repositories} exact></Route>
+          <Route path="/#/contact" component={Contact} exact></Route>
         </Switch>
       </Router>
     </StyledContent>
