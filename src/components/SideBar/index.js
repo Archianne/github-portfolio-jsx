@@ -14,7 +14,7 @@ const SideBar = () => {
   const [value] = useFetch(URL);
   return (
     <StyledSideBar>
-      {/* <img src={value.avatar_url} alt="" />
+      <img src={value.avatar_url} alt="" />
       <h1>{value.name}</h1>
       <h3>{value.login}</h3>
       <Button>Follow</Button>
@@ -56,7 +56,7 @@ const SideBar = () => {
         src="https://github.com/SchoolOfCode.png"
         alt={value.company}
         title={value.company}
-      /> */}
+      />
     </StyledSideBar>
   );
 };
@@ -64,13 +64,12 @@ const SideBar = () => {
 export default SideBar;
 
 const StyledSideBar = styled.aside`
-background: blue;
   display: flex;
   flex-direction: column;
   line-height: 21px;
   width: 24%;
   max-width: 312px;
-  margin: 40px 8px 0 8px;
+  margin: -30px 8px 0 8px;
   padding-left: 16px;
 
   h1 {

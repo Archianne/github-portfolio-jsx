@@ -19,7 +19,7 @@ const CNavBar = () => {
         title: "Repositories",
         icon: BiBookBookmark,
         path: "repositories",
-        // num: value.public_repos,
+        num: value.public_repos,
       },
       {
         title: "Languages",

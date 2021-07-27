@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (URL, id) => {
+const useFetch = (URL) => {
   const [error, setError] = useState(null);
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState({ data: null, isLoading: true });
 
   useEffect(() => {
-      fetch(URL, {
-        headers: { Accept: "application/json" },
-      })
-        .then((res) => res.json())
-        .then((data) => setValue(data))
-        .catch((err) => setError(err));
+    fetch(URL, {
+      headers: { Accept: "application/json" },
+    })
+      .then((res) => res.json())
+      .then((data) => setValue(data))
+      .catch((err) => setError(err));
   }, [URL]);
 
   if (error) {
