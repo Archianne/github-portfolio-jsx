@@ -5,33 +5,32 @@ import { HiOutlineBookOpen, HiOutlineCube } from "react-icons/hi";
 import { BiBookBookmark } from "react-icons/bi";
 import { AiOutlineProject } from "react-icons/ai";
 
-
 const CNavBar = () => {
-    const URL = `https://api.github.com/users/Archianne`;
-    const [value] = useFetch(URL);
-    const tabs = [
-      {
-        title: "Overview",
-        icon: HiOutlineBookOpen,
-        path: "",
-      },
-      {
-        title: "Repositories",
-        icon: BiBookBookmark,
-        path: "repositories",
-        num: value.public_repos,
-      },
-      {
-        title: "Languages",
-        icon: AiOutlineProject,
-        path: "languages",
-      },
-      {
-        title: "Contact me",
-        icon: HiOutlineCube,
-        path: "contact",
-      },
-    ];
+  const URL = `https://api.github.com/users/Archianne`;
+  const [value] = useFetch(URL);
+  const tabs = [
+    {
+      title: "Overview",
+      icon: HiOutlineBookOpen,
+      path: "",
+    },
+    {
+      title: "Repositories",
+      icon: BiBookBookmark,
+      path: "repositories",
+      num: value.public_repos,
+    },
+    {
+      title: "Skills",
+      icon: AiOutlineProject,
+      path: "skills",
+    },
+    {
+      title: "Contact me",
+      icon: HiOutlineCube,
+      path: "contact",
+    },
+  ];
 
   return (
     <StyledCNavBar>
@@ -107,7 +106,7 @@ const StyledCNavBar = styled.nav`
   }
 
   .active {
-    border-bottom: 2px solid orange !important;
+    border-bottom: 2px solid ${(props) => props.theme.active} !important;
     font-weight: 600;
   }
 `;
