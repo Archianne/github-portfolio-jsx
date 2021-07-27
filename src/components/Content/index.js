@@ -11,8 +11,9 @@ const Content = () => {
 export default Content;
 
 const StyledContent = styled.section`
-  width: 75%;
+  width: 70%;
+  max-width: 936px;
   background: red;
   margin-top: 40px;
-  padding: 0px 24px 0 8px;
+  margin: 20px 24px 0 8px;
 `;

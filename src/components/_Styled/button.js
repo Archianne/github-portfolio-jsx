@@ -5,7 +5,8 @@ const Button = ({ children }) => {
 };
 
 const StyledButton = styled.button`
-  width: 210px;
+  max-width: 280px;
+  width: 100%;
   height: 32px;
   padding: 5px 16px;
   transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);

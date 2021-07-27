@@ -8,6 +8,7 @@ const LightTheme = {
   buttonBg: "#FAFBFC",
   buttonBgHover: "#f3f4f6",
   boxBorder: "#e1e4e8",
+  num: "#D1D5DA90",
 };
 
 const DarkTheme = {
@@ -20,6 +21,7 @@ const DarkTheme = {
   buttonBg: "#fff",
   buttonBgHover: "#fff",
   boxBorder: "#fff",
+  num: "#D1D5DA90",
 };
 
 const themes = {

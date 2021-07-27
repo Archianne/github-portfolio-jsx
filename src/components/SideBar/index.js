@@ -1,8 +1,9 @@
 import { IoPeopleOutline } from "react-icons/io5";
-import { FaRegStar, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import { BiBuildings, BiLink } from "react-icons/bi";
+import { FaRegStar } from "react-icons/fa";
+import { BiBuildings } from "react-icons/bi";
 import { FiMapPin, FiMail } from "react-icons/fi";
 import { BsLink45Deg } from "react-icons/bs";
+import { IoLogoLinkedin } from "react-icons/io";
 import useFetch from "../_Hooks/useFetch";
 import styled from "styled-components";
 import Button from "../_Styled/button";
@@ -13,7 +14,7 @@ const SideBar = () => {
   const [value] = useFetch(URL);
   return (
     <StyledSideBar>
-      <img src={value.avatar_url} alt="" />
+      {/* <img src={value.avatar_url} alt="" />
       <h1>{value.name}</h1>
       <h3>{value.login}</h3>
       <Button>Follow</Button>
@@ -42,13 +43,20 @@ const SideBar = () => {
       <p>
         <BsLink45Deg /> {value.blog}
       </p>
+      <p>
+        <IoLogoLinkedin />{" "}
+        <a href="https://www.linkedin.com/in/helena-archer/">
+          /in/helena-archer
+        </a>
+      </p>
       <Line />
       <h4>Organizations</h4>
       <img
         className="logo-org"
         src="https://github.com/SchoolOfCode.png"
-        alt={value.company} title={value.company}
-      />
+        alt={value.company}
+        title={value.company}
+      /> */}
     </StyledSideBar>
   );
 };
@@ -56,10 +64,12 @@ const SideBar = () => {
 export default SideBar;
 
 const StyledSideBar = styled.aside`
+background: blue;
   display: flex;
   flex-direction: column;
   line-height: 21px;
-  width: 25%;
+  width: 24%;
+  max-width: 312px;
   margin: 40px 8px 0 8px;
   padding-left: 16px;
 
@@ -87,7 +97,8 @@ const StyledSideBar = styled.aside`
   }
 
   img {
-    width: 211px;
+    max-width: 280px;
+    width: 100%;
     border-radius: 50%;
     align-self: center;
   }
@@ -100,6 +111,14 @@ const StyledSideBar = styled.aside`
     span {
       color: ${(props) => props.theme.mainColor};
       font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      color: ${(props) => props.theme.mainColor};
+    }
+    a:hover {
+      color: ${(props) => props.theme.secondColor};
     }
   }
 
