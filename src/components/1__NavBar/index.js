@@ -1,37 +1,30 @@
 import styled from "styled-components";
-import Icons from "../../theme/icons"
+import Icons from "../../theme/icons";
+import Image from "../_Styled/img";
 import Input from "../_Styled/input";
 import Link from "../_Styled/link";
-
 
 const NavBar = (props) => {
   return (
     <StyledNavBar>
-      <div className="nav-left">
+      <FlexDiv>
         <Icons.Github className="logo-icon" onClick={props.changeTheme} />
 
-        <form>
-          <Input />
-        </form>
+        <Input />
 
         <Link href="/">Pulls</Link>
         <Link href="/">Issues</Link>
         <Link href="/">Marketplace</Link>
         <Link href="/">Explore</Link>
-       
-      </div>
+      </FlexDiv>
 
-      <div className="nav-right">
+      <FlexDiv>
         <Icons.Bell className="nav-icon bell-icon" />
         <Icons.Plus className="nav-icon plus-icon" />
         <Icons.Arrow className="nav-icon arrow-icon" />
-        <img
-          src="https://github.com/Archianne.png"
-          alt="Archianne"
-          className="git-icon"
-        />
+        <Image src="https://github.com/Archianne.png" alt="Archianne" />
         <Icons.Arrow className="nav-icon arrow-icon" />
-      </div>
+      </FlexDiv>
     </StyledNavBar>
   );
 };
@@ -40,25 +33,23 @@ export default NavBar;
 
 const StyledNavBar = styled.nav`
   display: flex;
-  flex-wrap: no-wrap;
-  flex-direction: row;
+  flex-flow: row no-wrap;
   justify-content: space-between;
   align-items: center;
-  background: ${(props) => props.theme.navBg};
   padding: 16px 24px;
   line-height: 21px;
   height: 62px;
+  background: ${(props) => props.theme.navBg};
   color: ${(props) => props.theme.navFontColor};
 }
 
-.nav-left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 90%;
+.logo-icon {
+  width: 32px;
+  height: auto;
 }
+`;
 
-.nav-right {
+const FlexDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -80,16 +71,8 @@ const StyledNavBar = styled.nav`
     width: 20px;
     height: 20px;
   }
-}
 
-.logo-icon {
-  width: 32px;
-  height: auto;
-}
-
-.git-icon {
-  width: 20px;
-  border-radius: 50%;
-}
-
+  img {
+    width: 20px;
+  }
 `;

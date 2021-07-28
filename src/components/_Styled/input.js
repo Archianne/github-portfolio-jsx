@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const Input = () => {
-  return <StyledInput type="search" placeholder="Search or jump to..." />;
+  return (
+    <form>
+      <StyledInput type="search" placeholder="Search or jump to..." />
+    </form>
+  );
 };
 
 export default Input;
