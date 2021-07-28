@@ -83,13 +83,13 @@ const StyledSideBar = styled.aside`
     font-style: normal;
     font-weight: 300;
     line-height: 24px;
-    color: ${(props) => props.theme.secondColor};
+    color: ${(props) => props.theme.fontColor2};
     padding-bottom: 16px;
   }
 
   h4 {
     font-size: 16px;
-    color: ${(props) => props.theme.mainColor};
+    color: ${(props) => props.theme.fontColor1};
     font-weight: 600;
     padding-top: 16px;
     margin-bottom: 8px;
@@ -108,16 +108,16 @@ const StyledSideBar = styled.aside`
     white-space: nowrap;
 
     span {
-      color: ${(props) => props.theme.mainColor};
+      color: ${(props) => props.theme.spamFontColor};
       font-weight: 600;
     }
 
     a {
       text-decoration: none;
-      color: ${(props) => props.theme.mainColor};
+      color: ${(props) => props.theme.fontColor1};
     }
     a:hover {
-      color: ${(props) => props.theme.secondColor};
+      color: ${(props) => props.theme.fontColor2};
     }
   }
 
@@ -126,7 +126,7 @@ const StyledSideBar = styled.aside`
   }
 
   .info {
-    color: ${(props) => props.theme.secondColor};
+    color: ${(props) => props.theme.fontColor2};
   }
 
   .logo-org {

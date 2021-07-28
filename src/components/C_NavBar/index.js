@@ -39,7 +39,7 @@ const CNavBar = () => {
         {tabs.map((tab, index) => (
           <div
             className={`tabs ${
-              window.location.pathname.split("/").pop() === tab.path
+              window.location.pathname.split("/#/").pop() === `/${tab.path}`
                 ? "active"
                 : ""
             }`}
@@ -63,6 +63,7 @@ const StyledCNavBar = styled.nav`
   justify-content: center;
   width: 100vw;
   border-bottom: 1px solid ${(props) => props.theme.boxBorder};
+  color: ${(props) => props.theme.fontColor1} !important;
 
   .blank {
     width: 24%;
@@ -88,16 +89,16 @@ const StyledCNavBar = styled.nav`
     margin: 0 7px;
   }
 
-  .link {
+  a {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    color: ${(props) => props.theme.mainColor};
+    color: ${(props) => props.theme.fontColor2};
   }
 
   .num {
-    background-color: ${(props) => props.theme.num};
+    background-color: ${(props) => props.theme.numBg};
     border-radius: 24px;
     min-width: 20px;
     font-size: 12px;
@@ -108,6 +109,10 @@ const StyledCNavBar = styled.nav`
   .active {
     border-bottom: 2px solid ${(props) => props.theme.active} !important;
     font-weight: 600;
+
+    a {
+      color: ${(props) => props.theme.fontColor1} !important;
+    }
   }
 `;
 

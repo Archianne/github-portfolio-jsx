@@ -1,29 +1,59 @@
 const LightTheme = {
   bg: "#ffffff",
+  boxBorder: "#E1E4E8",
+  line: "#EBEDEF",
+  fontColor1: "#24292E",
+  fontColor2: "#6B727A",
+
+  //navbar
   navBg: "#24292E",
-  navColor: "#ffffff",
-  navBorder: "#444d56",
-  mainColor: "#24292E",
-  secondColor: "#586069",
+  navInputBg: "#24292E",
+  navInputFocus: "#FFFFFF",
+  navFontColor: "#FFFFFF",
+  navFontColor2: "#24292E",
+  navInputColor: "#B7C3C5",
+  navBorder: "#444D56",
+  navBorder2: "#0366D6",
+
+  //sidebar
+  statusBg: "#FFFFFF",
+  spamFontColor: "#24292E",
   buttonBg: "#FAFBFC",
   buttonBgHover: "#f3f4f6",
-  boxBorder: "#e1e4e8",
-  num: "#D1D5DA90",
-  active: "#f9826c"
+  buttonBorderHover: "#E1E4E8",
+
+  //content_navbar
+  numBg: "#E8EAEC",
+  active: "#f9826c",
 };
 
 const DarkTheme = {
-  bg: "#333",
-  navBg: "#fff",
-  navColor: "#333",
-  navBorder: "#333",
-  mainColor: "#333",
-  secondColor: "red",
-  buttonBg: "#fff",
-  buttonBgHover: "#fff",
-  boxBorder: "#fff",
-  num: "#D1D5DA90",
-  active: "#f9826c"
+  bg: "#0D1117",
+  boxBorder: "#30363D",
+  lines: "#21262D",
+  fontColor1: "#C9D1D9",
+  fontColor2: "#808892",
+
+  //navbar
+  navBg: "#161B22",
+  navInputBg: "#0D1117",
+  navInputFocus: "#0D1117",
+  navFontColor: "#F0F6FC",
+  navFontColor2: "#C2C3C5",
+  navInputColor: "#C2C3C5",
+  navBorder: "#21262D",
+  navBorder2: "#0366D6",
+
+  //sidebar
+  statusBg: "#0D1117",
+  spamFontColor: "#FFFFFF",
+  buttonBg: "#21262D",
+  buttonBgHover: "#30363d",
+  buttonBorderHover: "#8b949e",
+
+  //content_navbar
+  numBg: "#262C32",
+  active: "#f9826c",
 };
 
 const themes = {
@@ -32,5 +62,3 @@ const themes = {
 };
 
 export default themes;
-
-// export const lightTheme = (props) => props.theme.primaryColors;

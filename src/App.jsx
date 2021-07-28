@@ -1,4 +1,4 @@
-import NavBar from "./components/NavBar";
+import NavBar from "./components/1__NavBar";
 import React, { useState } from "react";
 import Main from "./components/Main";
 import { ThemeProvider } from "styled-components";
