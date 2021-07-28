@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import useFetch from "../_Hooks/useFetch";
-
-import { HiOutlineBookOpen, HiOutlineCube } from "react-icons/hi";
-import { BiBookBookmark } from "react-icons/bi";
-import { AiOutlineProject } from "react-icons/ai";
+import Icons from "../../theme/icons";
 
 const CNavBar = () => {
   const URL = `https://api.github.com/users/Archianne`;
@@ -11,23 +8,23 @@ const CNavBar = () => {
   const tabs = [
     {
       title: "Overview",
-      icon: HiOutlineBookOpen,
+      icon: Icons.Book,
       path: "",
     },
     {
       title: "Repositories",
-      icon: BiBookBookmark,
+      icon: Icons.Repo,
       path: "repositories",
       num: value.public_repos,
     },
     {
       title: "Skills",
-      icon: AiOutlineProject,
+      icon: Icons.Project,
       path: "skills",
     },
     {
       title: "Contact me",
-      icon: HiOutlineCube,
+      icon: Icons.Cube,
       path: "contact",
     },
   ];

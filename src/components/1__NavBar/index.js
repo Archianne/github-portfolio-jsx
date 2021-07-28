@@ -1,44 +1,36 @@
-import { ImGithub } from "react-icons/im";
-import { FaRegBell } from "react-icons/fa";
-import { AiOutlineCaretDown } from "react-icons/ai";
-import { HiOutlinePlus } from "react-icons/hi";
 import styled from "styled-components";
+import Icons from "../../theme/icons"
 import Input from "../_Styled/input";
+import Link from "../_Styled/link";
+
 
 const NavBar = (props) => {
   return (
     <StyledNavBar>
       <div className="nav-left">
-        <ImGithub className="logo-icon" onClick={props.changeTheme} />
+        <Icons.Github className="logo-icon" onClick={props.changeTheme} />
 
         <form>
           <Input />
         </form>
 
-        <a href="/" className="nav-link">
-          Pulls
-        </a>
-        <a href="/" className="nav-link">
-          Issues
-        </a>
-        <a href="/" className="nav-link">
-          Marketplace
-        </a>
-        <a href="/" className="nav-link">
-          Explore
-        </a>
+        <Link href="/">Pulls</Link>
+        <Link href="/">Issues</Link>
+        <Link href="/">Marketplace</Link>
+        <Link href="/">Explore</Link>
+       
       </div>
 
       <div className="nav-right">
-        <FaRegBell className="nav-icon bell-icon" />
-        <HiOutlinePlus className="nav-icon plus-icon" />
-        <AiOutlineCaretDown className="nav-icon arrow-icon" />
+        <Icons.Bell className="nav-icon bell-icon" />
+        <Icons.Plus className="nav-icon plus-icon" />
+        <Icons.Arrow className="nav-icon arrow-icon" />
         <img
           src="https://github.com/Archianne.png"
           alt="Archianne"
           className="git-icon"
         />
-        <AiOutlineCaretDown className="nav-icon arrow-icon" />
+        <Icons.Arrow className="nav-icon arrow-icon" />
       </div>
     </StyledNavBar>
   );
@@ -64,17 +56,6 @@ const StyledNavBar = styled.nav`
   flex-direction: row;
   align-items: center;
   width: 90%;
-}
-
-.nav-link {
-  color: ${(props) => props.theme.navFontColor};
-  margin-right: 16px;
-  font-weight: 645;
-  text-decoration: none;
-}
-
-a {
-  color: white;
 }
 
 .nav-right {

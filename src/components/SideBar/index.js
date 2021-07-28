@@ -1,13 +1,9 @@
-import { IoPeopleOutline } from "react-icons/io5";
-import { FaRegStar } from "react-icons/fa";
-import { BiBuildings } from "react-icons/bi";
-import { FiMapPin, FiMail } from "react-icons/fi";
-import { BsLink45Deg } from "react-icons/bs";
-import { IoLogoLinkedin } from "react-icons/io";
-import useFetch from "../_Hooks/useFetch";
 import styled from "styled-components";
+import Icons from "../../theme/icons";
+import useFetch from "../_Hooks/useFetch";
 import Button from "../_Styled/button";
 import Line from "../_Styled/line";
+import Link from "../_Styled/link";
 
 const SideBar = () => {
   const URL = `https://api.github.com/users/Archianne`;
@@ -20,34 +16,29 @@ const SideBar = () => {
       <Button>Follow</Button>
       <p className="bio">{value.bio}</p>
       <p className="info">
-        <IoPeopleOutline /> <span>{value.followers}</span> followers ·{" "}
+        <Icons.People className="icon" /> <span>{value.followers}</span>
+        followers <span style={{ marginLeft: 5 }}>·</span>{" "}
         <span>{value.following}</span> following
-      </p>
-      <p
-        className="info"
-        style={{
-          paddingBottom: 16,
-        }}
-      >
-        <FaRegStar /> <span>{value.public_repos}</span>
+        <span style={{ marginLeft: 5 }}>·</span>
+        <Icons.Star className="icon" /> <span>{value.public_repos}</span>
       </p>
       <p>
-        <BiBuildings /> {value.company}
+        <Icons.Building className="icon" /> {value.company}
       </p>
       <p>
-        <FiMail /> helena19w@gmail.com
+        <Icons.Mail className="icon" /> helena19w@gmail.com
       </p>
       <p>
-        <FiMapPin /> {value.location}
+        <Icons.Map className="icon" /> {value.location}
       </p>
       <p>
-        <BsLink45Deg /> {value.blog}
+        <Icons.Link className="icon" /> {value.blog}
       </p>
       <p>
-        <IoLogoLinkedin />{" "}
-        <a href="https://www.linkedin.com/in/helena-archer/">
+        <Icons.Linkedin className="icon" />
+        <Link href="https://www.linkedin.com/in/helena-archer/">
           /in/helena-archer
-        </a>
+        </Link>
       </p>
       <Line />
       <h4>Organizations</h4>
@@ -106,15 +97,19 @@ const StyledSideBar = styled.aside`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 
     span {
       color: ${(props) => props.theme.spamFontColor};
       font-weight: 600;
+      margin-right: 5px;
     }
 
     a {
       text-decoration: none;
       color: ${(props) => props.theme.fontColor1};
+      font-size: 12px;
     }
     a:hover {
       color: ${(props) => props.theme.fontColor2};
@@ -127,11 +122,16 @@ const StyledSideBar = styled.aside`
 
   .info {
     color: ${(props) => props.theme.fontColor2};
+    padding-bottom: 16px;
   }
 
   .logo-org {
     width: 32px;
     align-self: flex-start;
     border-radius: 6px;
+  }
+
+  .icon {
+    margin-right: 5px;
   }
 `;
