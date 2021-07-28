@@ -1,6 +1,6 @@
 import NavBar from "./components/1__NavBar";
 import React, { useState } from "react";
-import Main from "./components/Main";
+import Main from "./components/2__Main";
 import { ThemeProvider } from "styled-components";
 import themes from "./theme/theme";
 import GlobalStyle from "./theme/globalStyle";

@@ -10,10 +10,10 @@ const Content = () => {
     <StyledContent>
       <Router>
         <Switch>
-          <Route path="/" component={Home} exact></Route>
-          <Route path="/skills" component={Skills} exact></Route>
-          <Route path="/repositories" component={Repositories} exact></Route>
-          <Route path="/contact" component={Contact} exact></Route>
+          <Route path="/" component={Home} exact />
+          <Route path="/skills" component={Skills} />
+          <Route path="/repositories" component={Repositories} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </Router>
     </StyledContent>

@@ -1,7 +1,7 @@
-import SideBar from "../SideBar";
+import SideBar from "../3__SideBar";
 import styled from "styled-components";
-import Content from "../Content";
-import CNavBar from "../C_NavBar";
+import Content from "../4__Content";
+import CNavBar from "../5__CNavBar";
 
 const Main = () => {
   return (
