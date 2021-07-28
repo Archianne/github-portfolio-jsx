@@ -7,6 +7,7 @@ import Link from "../_Styled/link";
 const NavBar = (props) => {
   return (
     <StyledNavBar>
+      <Icons.Menu className="menu-icon" />
       <FlexDiv>
         <Icons.Github className="logo-icon" onClick={props.changeTheme} />
 
@@ -41,18 +42,37 @@ const StyledNavBar = styled.nav`
   height: 62px;
   background: ${(props) => props.theme.navBg};
   color: ${(props) => props.theme.navFontColor};
-}
+  @media (max-width: 768px) {
+    padding: 16px 16px;
+  }
 
-.logo-icon {
-  width: 32px;
-  height: auto;
-}
+  .logo-icon {
+    width: 32px;
+    height: auto;
+  }
+
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
 `;
 
 const FlexDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  @media (max-width: 768px) {
+    .arrow-icon,
+    .plus-icon,
+    img,
+    a,
+    input {
+      display: none;
+    }
+  }
 
   .arrow-icon {
     width: 10px;
@@ -65,6 +85,9 @@ const FlexDiv = styled.div`
     margin-right: 16px;
     width: 16px;
     height: 16px;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
   }
 
   .plus-icon {
