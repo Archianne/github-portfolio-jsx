@@ -26,7 +26,7 @@ const CNavBar = () => {
       path: "skills",
     },
     {
-      title: "Contact me",
+      title: "Contact",
       icon: Icons.Cube,
       path: "contact",
     },
@@ -43,8 +43,7 @@ const CNavBar = () => {
           >
             <Link href={"/#/" + tab.path}>
               <tab.icon className="icon" />
-
-              <p className="items">{tab.title}</p>
+              <p>{tab.title}</p>
               {tab.num && <div className="num">{tab.num}</div>}
             </Link>
           </div>
@@ -81,16 +80,16 @@ const StyledCNavBar = styled.nav`
     height: 48px;
   }
 
-  p {
-    margin: 0 7px;
-  }
-
   a {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
     color: ${(props) => props.theme.fontColor2};
+  }
+
+  .icon {
+    margin: 0 8px;
   }
 
   .num {
@@ -100,14 +99,15 @@ const StyledCNavBar = styled.nav`
     font-size: 12px;
     padding: 0 6px;
     font-weight: 500;
+    margin-left: 10px;
   }
 
   .active {
     border-bottom: 2px solid ${(props) => props.theme.active} !important;
-    font-weight: 600;
 
     a {
       color: ${(props) => props.theme.fontColor1} !important;
+      font-weight: 630 !important;
     }
   }
 
@@ -118,10 +118,6 @@ const StyledCNavBar = styled.nav`
     }
     .items {
       display: none;
-    }
-
-    .icon {
-      margin: 0 10px;
     }
   }
 `;

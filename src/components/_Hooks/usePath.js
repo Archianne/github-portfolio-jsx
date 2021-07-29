@@ -1,14 +1,12 @@
 import { useState } from "react";
-import createHistory from "history/createBrowserHistory";
+import { createBrowserHistory } from "history";
 const usePath = (path) => {
   const [link, setLink] = useState();
-  const history = createHistory();
+  const history = createBrowserHistory();
 
   const unlisten = history.listen((location) => {
     setLink(window.location.hash);
   });
-  console.log(link);
-
   return [link, unlisten];
 };
 
