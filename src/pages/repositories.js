@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import styled from "styled-components";
 import useFetch from "../components/_Hooks/useFetch";
 import Line from "../components/_Styled/line";
+import Link from "../components/_Styled/link";
 
 const Repositories = () => {
   const URL = `https://api.github.com/users/Archianne/repos`;
@@ -13,9 +14,9 @@ const Repositories = () => {
         <List key={item.id}>
           <p>{item.name}</p>
           <Line />
-          <a href={item.html_url}>Repository</a>
+          <Link href={item.html_url}>Repository</Link>
           <Line />
-          <a href={`https://archianne.github.io/${item.name}`}>Preview</a>
+          <Link href={`https://archianne.github.io/${item.name}`}>Preview</Link>
         </List>
       );
     });
@@ -35,6 +36,10 @@ const StyledRepo = styled.ul`
   width: 100%;
   flex-basis: auto;
   justify-content: space-around;
+
+  a {
+    color: ${(props) => props.theme.fontColor1};
+  }
 `;
 
 const List = styled.li`

@@ -49,6 +49,11 @@ const StyledNavBar = styled.nav`
     padding: 16px 16px;
   }
 
+  a {
+    color: ${(props) => props.theme.navFontColor};
+    margin-right: 16px;
+  }
+  
   .logo-icon {
     width: 32px;
     height: auto;

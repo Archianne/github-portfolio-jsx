@@ -27,10 +27,6 @@ const StyledButton = styled.button`
     border: 1px solid $((props) => props.theme.buttonBorderHover);
   }
 
-  a {
-    color: ${(props) => props.theme.fontColor1};
-  }
-
   @media (max-width: 768px) {
     max-width: 90vw;
     height: 30px;

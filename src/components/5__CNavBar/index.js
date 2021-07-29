@@ -88,7 +88,7 @@ const StyledCNavBar = styled.nav`
     color: ${(props) => props.theme.fontColor2};
   }
 
-  .icon {
+  p {
     margin: 0 8px;
   }
 
@@ -99,7 +99,6 @@ const StyledCNavBar = styled.nav`
     font-size: 12px;
     padding: 0 6px;
     font-weight: 500;
-    margin-left: 10px;
   }
 
   .active {
