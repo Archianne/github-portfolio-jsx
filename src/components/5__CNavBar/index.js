@@ -2,8 +2,10 @@ import styled from "styled-components";
 import useFetch from "../_Hooks/useFetch";
 import Icons from "../../theme/icons";
 import Link from "../_Styled/link";
+import usePath from "../_Hooks/usePath";
 
 const CNavBar = () => {
+  const [link] = usePath();
   const URL = `https://api.github.com/users/Archianne`;
   const [value] = useFetch(URL);
   const tabs = [
@@ -36,11 +38,7 @@ const CNavBar = () => {
       <div className="main">
         {tabs.map((tab, index) => (
           <div
-            className={`tabs ${
-              window.location.pathname.split("/#/").pop() === `/${tab.path}`
-                ? "active"
-                : ""
-            }`}
+            className={`tabs ${link === `#/${tab.path}` ? "active" : ""}`}
             key={index}
           >
             <Link href={"/#/" + tab.path}>
