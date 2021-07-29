@@ -1,53 +1,40 @@
 import styled from "styled-components";
-import Icons from "../../theme/icons";
 import useFetch from "../_Hooks/useFetch";
 import Button from "../_Styled/button";
 import Line from "../_Styled/line";
-import Link from "../_Styled/link";
+import FollowersDiv from "./followers";
+import InfosDiv from "./infos";
+import UsernameDiv from "./username";
 
 const SideBar = () => {
   const URL = `https://api.github.com/users/Archianne`;
   const [value] = useFetch(URL);
   return (
-    <StyledSideBar>
-      <img src={value.avatar_url} alt="" />
-      <h1>{value.name}</h1>
-      <h3>{value.login}</h3>
-      <Button>Follow</Button>
-      <p className="bio">{value.bio}</p>
-      <p className="info">
-        <Icons.People className="icon" /> <span>{value.followers}</span>
-        followers <span style={{ marginLeft: 5 }}>·</span>{" "}
-        <span>{value.following}</span> following
-        <span style={{ marginLeft: 5 }}>·</span>
-        <Icons.Star className="icon" /> <span>{value.public_repos}</span>
-      </p>
-      <p>
-        <Icons.Building className="icon" /> {value.company}
-      </p>
-      <p>
-        <Icons.Mail className="icon" /> helena19w@gmail.com
-      </p>
-      <p>
-        <Icons.Map className="icon" /> {value.location}
-      </p>
-      <p>
-        <Icons.Link className="icon" /> {value.blog}
-      </p>
-      <p>
-        <Icons.Linkedin className="icon" />
-        <Link href="https://www.linkedin.com/in/helena-archer/">
-          /in/helena-archer
-        </Link>
-      </p>
-      <Line />
-      <h4>Organizations</h4>
-      <img
-        className="logo-org"
-        src="https://github.com/SchoolOfCode.png"
-        alt={value.company}
-        title={value.company}
-      />
+    <StyledSideBar id="sideBar">
+      <UsernameDiv value={value} />
+
+      <div id="button">
+        <Button>Follow</Button>
+      </div>
+
+      <div id="bio">
+        <p className="bio">{value.bio}</p>
+      </div>
+
+      <FollowersDiv value={value} />
+
+      <InfosDiv value={value} />
+
+      <div id="organization">
+        <Line />
+        <h4>Organizations</h4>
+        <img
+          className="logo-org"
+          src="https://github.com/SchoolOfCode.png"
+          alt={value.company}
+          title={value.company}
+        />
+      </div>
     </StyledSideBar>
   );
 };
@@ -134,4 +121,45 @@ const StyledSideBar = styled.aside`
   .icon {
     margin-right: 5px;
   }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+
+    #username {
+      order: 1;
+      display: flex;
+      flex-flow: row;
+      margin-bottom: 24px;
+    
+      img {
+      width: 55px;
+      margin-right: 16px;
+      }
+
+      h1, h3 {
+      padding: 0;
+      }
+    }
+
+    #bio {
+      order: 2;
+    }
+
+    #infos {
+      order: 3;
+    }
+
+    #followers {
+      order: 4;
+    }
+
+    #button {
+      order: 5;
+      margin-bottom: 16px;
+    }
+
+    #organization {
+      display: none;
+    }
 `;

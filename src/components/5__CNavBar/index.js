@@ -30,7 +30,7 @@ const CNavBar = () => {
   ];
 
   return (
-    <StyledCNavBar>
+    <StyledCNavBar id="cNavBar">
       <div className="blank"></div>
       <div className="main">
         {tabs.map((tab, index) => (

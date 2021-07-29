@@ -7,7 +7,7 @@ import Contact from "../../pages/contact";
 
 const Content = () => {
   return (
-    <StyledContent>
+    <StyledContent id="content">
       <Router>
         <Switch>
           <Route path="/" component={Home} exact />
