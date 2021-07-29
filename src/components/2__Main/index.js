@@ -28,29 +28,24 @@ const StyledMain = styled.main`
     flex-flow: column no-wrap;
     width: 100vw;
 
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
     #cNavBar {
+
       order: 2;
       width: 100vw;
       overflow-x: scroll;
+      .blank {
+        display: none;
+      }
     }
 
     #sideBar {
       order: 1;
       width: 100vw;
     }
-    
+
     #content {
       order: 3;
       width: 100vw;
-    }
-
-    .blank {
-      display: none;
     }
   }
 `;

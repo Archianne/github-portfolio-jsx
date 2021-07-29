@@ -25,9 +25,14 @@ export default Content;
 const StyledContent = styled.section`
   width: 70%;
   max-width: 936px;
-  margin-top: 40px;
-  margin: 25px 24px 0 8px;
+  margin: 40px 24px 0 8px;
   padding: 24px;
   border: 1px solid ${(props) => props.theme.boxBorder};
   border-radius: 6px;
+
+  @media (max-width: 768px) {
+    border: none;
+    margin: 8px 0;
+    padding: 30px;
+  }
 `;

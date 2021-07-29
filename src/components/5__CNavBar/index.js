@@ -111,6 +111,20 @@ const StyledCNavBar = styled.nav`
       color: ${(props) => props.theme.fontColor1} !important;
     }
   }
+
+  @media (max-width: 768px) {
+    .main {
+      display: flex;
+      justify-content: space-between;
+    }
+    .items {
+      display: none;
+    }
+
+    .icon {
+      margin: 0 10px;
+    }
+  }
 `;
 
 export default CNavBar;

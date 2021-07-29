@@ -28,7 +28,7 @@ const StyledButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    max-width: 90vw;
+    max-width: 85vw;
     height: 30px;
   }
 `;

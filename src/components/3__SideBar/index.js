@@ -83,7 +83,6 @@ const StyledSideBar = styled.aside`
   p {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
     display: flex;
     align-items: center;
 
@@ -156,7 +155,10 @@ const StyledSideBar = styled.aside`
 
     #button {
       order: 5;
-      margin-bottom: 16px;
+      margin: 0 0 16px 0;
+    padding: 0;
+  width: 100%;
+  text-align: center;
     }
 
     #organization {
