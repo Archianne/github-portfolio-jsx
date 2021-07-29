@@ -6,22 +6,23 @@ import Line from "../components/_Styled/line";
 const Repositories = () => {
   const URL = `https://api.github.com/users/Archianne/repos`;
   const [value] = useFetch(URL);
+  const mapValues =
+    Array.isArray(value) &&
+    value.slice(0, 12).map((item) => {
+      return (
+        <List key={item.id}>
+          <p>{item.name}</p>
+          <Line />
+          <a href={item.html_url}>Repository</a>
+          <Line />
+          <a href={`https://archianne.github.io/${item.name}`}>Preview</a>
+        </List>
+      );
+    });
 
   return (
     <StyledRepo>
-      <Suspense fallback={<div>Loading</div>}>
-        {value.slice(0, 12).map((item) => {
-          return (
-            <List key={item.id}>
-              <p>{item.name}</p>
-              <Line />
-              <a href={item.html_url}>Repository</a>
-              <Line />
-              <a href={`https://archianne.github.io/${item.name}`}>Preview</a>
-            </List>
-          );
-        })}
-      </Suspense>
+      <Suspense fallback={<div>Loading</div>}>{mapValues}</Suspense>
     </StyledRepo>
   );
 };
