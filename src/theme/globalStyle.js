@@ -37,6 +37,15 @@ html::-webkit-scrollbar-thumb {
     display:none;
   }
 }
+
+#fallback {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${(props) => props.theme.navBg};
+}
 `;
 
 export default GlobalStyle;

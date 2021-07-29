@@ -1,14 +1,17 @@
-import SideBar from "../3__SideBar";
+import { lazy, Suspense } from "react";
 import styled from "styled-components";
-import Content from "../4__Content";
-import CNavBar from "../5__CNavBar";
+const SideBar = lazy(() => import("../3__SideBar"));
+const Content = lazy(() => import("../4__Content"));
+const CNavBar = lazy(() => import("../5__CNavBar"));
 
 const Main = () => {
   return (
     <StyledMain>
-      <CNavBar />
-      <SideBar />
-      <Content />
+      <Suspense fallback={<div>Loading</div>}>
+        <CNavBar />
+        <SideBar />
+        <Content />
+      </Suspense>
     </StyledMain>
   );
 };
@@ -29,7 +32,6 @@ const StyledMain = styled.main`
     width: 100vw;
 
     #cNavBar {
-
       order: 2;
       width: 100vw;
       overflow-x: scroll;

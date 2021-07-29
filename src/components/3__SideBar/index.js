@@ -1,29 +1,31 @@
+import { lazy, Suspense } from "react";
 import styled from "styled-components";
 import useFetch from "../_Hooks/useFetch";
-import Button from "../_Styled/3_button";
-import FollowersDiv from "../_Styled/3_followers";
-import InfosDiv from "../_Styled/3_infos";
-import UsernameDiv from "../_Styled/3_username";
-import OrganizationDiv from "../_Styled/3_organization";
+
+const Button = lazy(() => import("../_Styled/3_button"));
+const FollowersDiv = lazy(() => import("../_Styled/3_followers"));
+const InfosDiv = lazy(() => import("../_Styled/3_infos"));
+const UsernameDiv = lazy(() => import("../_Styled/3_username"));
+const OrganizationDiv = lazy(() => import("../_Styled/3_organization"));
 
 const SideBar = () => {
   const URL = `https://api.github.com/users/Archianne`;
   const [value] = useFetch(URL);
   return (
     <StyledSideBar id="sideBar">
-      <UsernameDiv value={value} />
+      <Suspense fallback={<div>Loading</div>}>
+        <UsernameDiv value={value} />
+        <Button>Follow</Button>
 
-      <Button>Follow</Button>
+        <div id="bio">
+          <p>{value.bio}</p>
+        </div>
 
-      <div id="bio">
-        <p>{value.bio}</p>
-      </div>
+        <FollowersDiv value={value} />
+        <InfosDiv value={value} />
 
-      <FollowersDiv value={value} />
-
-      <InfosDiv value={value} />
-
-      <OrganizationDiv value={value} />
+        <OrganizationDiv value={value} />
+      </Suspense>
     </StyledSideBar>
   );
 };

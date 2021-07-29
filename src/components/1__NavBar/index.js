@@ -1,31 +1,34 @@
+import { lazy, Suspense } from "react";
 import styled from "styled-components";
 import Icons from "../../theme/icons";
 import Image from "../_Styled/img";
-import Input from "../_Styled/1_input";
 import Link from "../_Styled/link";
+const Input = lazy(() => import("../_Styled/1_input"));
 
 const NavBar = (props) => {
   return (
     <StyledNavBar>
-      <Icons.Menu className="menu-icon" />
-      <FlexDiv>
-        <Icons.Github className="logo-icon" onClick={props.changeTheme} />
+      <Suspense fallback={<div>Loading</div>}>
+        <Icons.Menu className="menu-icon" />
+        <FlexDiv>
+          <Icons.Github className="logo-icon" onClick={props.changeTheme} />
 
-        <Input />
+          <Input />
 
-        <Link href="/">Pulls</Link>
-        <Link href="/">Issues</Link>
-        <Link href="/">Marketplace</Link>
-        <Link href="/">Explore</Link>
-      </FlexDiv>
+          <Link href="/">Pulls</Link>
+          <Link href="/">Issues</Link>
+          <Link href="/">Marketplace</Link>
+          <Link href="/">Explore</Link>
+        </FlexDiv>
 
-      <FlexDiv>
-        <Icons.Bell className="nav-icon bell-icon" />
-        <Icons.Plus className="nav-icon plus-icon" />
-        <Icons.Arrow className="nav-icon arrow-icon" />
-        <Image src="https://github.com/Archianne.png" alt="Archianne" />
-        <Icons.Arrow className="nav-icon arrow-icon" />
-      </FlexDiv>
+        <FlexDiv>
+          <Icons.Bell className="nav-icon bell-icon" />
+          <Icons.Plus className="nav-icon plus-icon" />
+          <Icons.Arrow className="nav-icon arrow-icon" />
+          <Image src="https://github.com/Archianne.png" alt="Archianne" />
+          <Icons.Arrow className="nav-icon arrow-icon" />
+        </FlexDiv>
+      </Suspense>
     </StyledNavBar>
   );
 };

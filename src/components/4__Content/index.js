@@ -1,19 +1,23 @@
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import Home from "../../pages/home";
-import Repositories from "../../pages/repositories";
-import Skills from "../../pages/skills";
-import Contact from "../../pages/contact";
+import React, { lazy, Suspense } from "react";
+
+const Home = lazy(() => import("../../pages/home"));
+const Repositories = lazy(() => import("../../pages/repositories"));
+const Skills = lazy(() => import("../../pages/skills"))
+const Contact = lazy(() => import("../../pages/contact"))
 
 const Content = () => {
   return (
     <StyledContent id="content">
       <Router>
         <Switch>
+        <Suspense fallback={<div>Loading</div>}>
           <Route path="/" component={Home} exact />
           <Route path="/skills" component={Skills} />
           <Route path="/repositories" component={Repositories} />
           <Route path="/contact" component={Contact} />
+        </Suspense>
         </Switch>
       </Router>
     </StyledContent>

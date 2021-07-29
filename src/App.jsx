@@ -1,12 +1,12 @@
-import NavBar from "./components/1__NavBar";
-import React, { useState } from "react";
-import Main from "./components/2__Main";
+import React, { useState, lazy } from "react";
 import { ThemeProvider } from "styled-components";
 import themes from "./theme/theme";
-import GlobalStyle from "./theme/globalStyle";
 
+const NavBar = lazy(() => import("./components/1__NavBar"));
+const Main = lazy(() => import("./components/2__Main"));
+const GlobalStyle = lazy(() => import("./theme/globalStyle"));
 
-function App() {
+const App = () => {
   const [theme, setTheme] = useState("light");
   const changeTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -15,10 +15,10 @@ function App() {
   return (
     <ThemeProvider theme={themes[theme]}>
       <GlobalStyle />
-      <NavBar changeTheme={changeTheme}/>
+      <NavBar changeTheme={changeTheme} />
       <Main />
     </ThemeProvider>
   );
-}
+};
 
 export default App;

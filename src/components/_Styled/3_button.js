@@ -24,7 +24,7 @@ const StyledButton = styled.button`
 
   &&:hover {
     background-color: ${(props) => props.theme.buttonBgHover};
-    border: 1px solid $((props) => props.theme.buttonBorderHover)
+    border: 1px solid $((props) => props.theme.buttonBorderHover);
   }
 
   @media (max-width: 768px) {
