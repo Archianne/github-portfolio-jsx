@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import styled from "styled-components";
 import useFetch from "../_Hooks/useFetch";
+import Link from "../_Styled/link";
 
 const Button = lazy(() => import("../_Styled/3_button"));
 const FollowersDiv = lazy(() => import("../_Styled/3_followers"));
@@ -15,7 +16,7 @@ const SideBar = () => {
     <StyledSideBar id="sideBar">
       <Suspense fallback={<div>Loading</div>}>
         <UsernameDiv value={value} />
-        <Button>Follow</Button>
+        <Button><Link href="https://github.com/Archianne" target="blank">Follow</Link></Button>
 
         <div id="bio">
           <p>{value.bio}</p>
