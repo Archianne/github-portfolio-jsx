@@ -17,6 +17,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-  `;
+
+html::-webkit-scrollbar {
+  width: 20px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: ${(props) => props.theme.navBg};
+}
+
+html::-webkit-scrollbar-thumb {
+  border: 5px solid transparent;
+  background-clip: content-box;
+  background-color: ${(props) => props.theme.numBg};
+}
+`;
 
 export default GlobalStyle;
