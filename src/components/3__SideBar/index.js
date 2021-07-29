@@ -52,6 +52,7 @@ const StyledSideBar = styled.aside`
   @media (max-width: 768px) {
     margin: 0;
     padding: 0;
+    max-width: 90vw;
 
     #username {
       order: 1;

@@ -31,6 +31,12 @@ html::-webkit-scrollbar-thumb {
   background-clip: content-box;
   background-color: ${(props) => props.theme.numBg};
 }
+
+@media (max-width: 768px) {
+  html::-webkit-scrollbar {
+    display:none;
+  }
+}
 `;
 
 export default GlobalStyle;
