@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const Image = ({ src, alt }) => {
-  return <StyledImage src={src} alt={alt} />;
+const Image = ({ src, alt, title }) => {
+  return <StyledImage src={src} alt={alt} title={title}/>;
 };
 
 export default Image;

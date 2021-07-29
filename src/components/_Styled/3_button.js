@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Button = ({ children }) => {
-  return <StyledButton>{children}</StyledButton>;
+  return <StyledButton id="button">{children}</StyledButton>;
 };
 
 const StyledButton = styled.button`

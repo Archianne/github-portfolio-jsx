@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Icons from "../../theme/icons";
 import Image from "../_Styled/img";
-import Input from "../_Styled/input";
+import Input from "../_Styled/1_input";
 import Link from "../_Styled/link";
 
 const NavBar = (props) => {

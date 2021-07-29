@@ -1,9 +1,10 @@
-import Icons from "../../theme/icons"
-import Link from "../_Styled/link";
+import styled from "styled-components";
+import Icons from "../../theme/icons";
+import Link from "./link";
 
 const InfosDiv = ({ value }) => {
   return (
-    <div id="infos">
+    <StyledDiv id="infos">
       <p>
         <Icons.Building className="icon" /> {value.company}
       </p>
@@ -15,7 +16,7 @@ const InfosDiv = ({ value }) => {
       </p>
       <p>
         <Icons.Link className="icon" />
-        <a href={value.blog}>@archianne.jsx</a>
+        <Link href={value.blog}>@archianne.jsx</Link>
       </p>
       <p>
         <Icons.Linkedin className="icon" />
@@ -23,8 +24,26 @@ const InfosDiv = ({ value }) => {
           /in/helena-archer
         </Link>
       </p>
-    </div>
+    </StyledDiv>
   );
 };
 
 export default InfosDiv;
+
+const StyledDiv = styled.div`
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${(props) => props.theme.fontColor1};
+  }
+  
+  a:hover {
+    color: ${(props) => props.theme.fontColor2};
+  }
+`;

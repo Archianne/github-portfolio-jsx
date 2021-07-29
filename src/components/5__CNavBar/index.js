@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useFetch from "../_Hooks/useFetch";
 import Icons from "../../theme/icons";
+import Link from "../_Styled/link";
 
 const CNavBar = () => {
   const URL = `https://api.github.com/users/Archianne`;
@@ -42,12 +43,12 @@ const CNavBar = () => {
             }`}
             key={index}
           >
-            <a href={"/#/" + tab.path} className="link">
+            <Link href={"/#/" + tab.path}>
               <tab.icon className="icon" />
 
               <p className="items">{tab.title}</p>
               {tab.num && <div className="num">{tab.num}</div>}
-            </a>
+            </Link>
           </div>
         ))}
       </div>
