@@ -57,6 +57,7 @@ const StyledNavBar = styled.nav`
   .logo-icon {
     width: 32px;
     height: auto;
+    cursor: pointer;
   }
 
   .menu-icon {
