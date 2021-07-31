@@ -33,9 +33,13 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
-  html::-webkit-scrollbar {
-    display:none;
+  html:-webkit-scrollbar {
+  scrollbar-width: none;  
+  display: none;
   }
+  body {
+  overflow-x: hidden; 
+}
 }
 
 #fallback {

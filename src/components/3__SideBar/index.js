@@ -16,7 +16,12 @@ const SideBar = () => {
     <StyledSideBar id="sideBar">
       <Suspense fallback={<div>Loading</div>}>
         <UsernameDiv value={value} />
-        <Button><Link href="https://github.com/Archianne" target="blank">Follow</Link></Button>
+
+        <div id="button">
+          <Link href="https://github.com/Archianne" target="blank">
+            <Button>Follow</Button>
+          </Link>
+        </div>
 
         <div id="bio">
           <p>{value.bio}</p>
@@ -84,4 +89,5 @@ const StyledSideBar = styled.aside`
     #organization {
       display: none;
     }
+
 `;

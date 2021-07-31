@@ -34,7 +34,12 @@ const StyledMain = styled.main`
     #cNavBar {
       order: 2;
       width: 100vw;
+      justify-content: start;
       overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       .blank {
         display: none;
       }

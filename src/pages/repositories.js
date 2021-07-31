@@ -55,4 +55,9 @@ const List = styled.li`
   margin: 5px 10px;
   padding: 10px;
   border: 1px solid ${(props) => props.theme.boxBorder};
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    margin: 5px 0;
+  }
 `;
