@@ -1,2 +1,0 @@
-(this.webpackJsonparchianne=this.webpackJsonparchianne||[]).push([[21],{80:function(n,e,c){"use strict";c.r(e);var i=c(0),s=c(7);e.default=function(){return Object(s.jsx)(i.Suspense,{fallback:Object(s.jsx)("div",{children:"Loading"}),children:Object(s.jsx)("h1",{children:"Hi"})})}}}]);
-//# sourceMappingURL=21.55d6f76f.chunk.js.map
