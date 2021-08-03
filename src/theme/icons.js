@@ -1,13 +1,21 @@
 import { ImGithub } from "react-icons/im";
 import { FaRegBell, FaRegStar } from "react-icons/fa";
-import { AiOutlineCaretDown } from "react-icons/ai";
-import { HiOutlinePlus, HiOutlineBookOpen, HiOutlineCube } from "react-icons/hi";
-import { AiOutlineProject, AiOutlineMenu } from "react-icons/ai";
+import {
+  AiOutlineProject,
+  AiOutlineMenu,
+  AiOutlineCaretDown,
+} from "react-icons/ai";
+import {
+  HiOutlinePlus,
+  HiOutlineBookOpen,
+  HiOutlineCube,
+} from "react-icons/hi";
 import { IoPeopleOutline } from "react-icons/io5";
 import { BiBookBookmark, BiBuildings } from "react-icons/bi";
 import { FiMapPin, FiMail } from "react-icons/fi";
 import { BsLink45Deg } from "react-icons/bs";
 import { IoLogoLinkedin } from "react-icons/io";
+import { RiChatQuoteLine } from "react-icons/ri";
 
 const Icons = {
   //navbar
@@ -21,6 +29,7 @@ const Icons = {
   Repo: BiBookBookmark,
   Project: AiOutlineProject,
   Cube: HiOutlineCube,
+  Blog: RiChatQuoteLine,
   //sidebar
   People: IoPeopleOutline,
   Star: FaRegStar,

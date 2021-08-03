@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
 import Icons from "../../theme/icons";
 import Image from "../_Styled/img";
@@ -6,6 +6,7 @@ import Link from "../_Styled/link";
 const Input = lazy(() => import("../_Styled/1_input"));
 
 const NavBar = (props) => {
+  
   return (
     <StyledNavBar>
       <Suspense fallback={<div>Loading</div>}>
@@ -107,4 +108,6 @@ const FlexDiv = styled.div`
   img {
     width: 20px;
   }
+
+  
 `;

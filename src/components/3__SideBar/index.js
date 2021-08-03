@@ -75,6 +75,7 @@ const StyledSideBar = styled.aside`
     }
 
     #followers {
+      margin-top: 8px;
       order: 4;
     }
 

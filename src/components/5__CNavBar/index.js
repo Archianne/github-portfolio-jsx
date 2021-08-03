@@ -30,6 +30,11 @@ const CNavBar = () => {
       icon: Icons.Cube,
       path: "contact",
     },
+    {
+      title: "Blog",
+      icon: Icons.Blog,
+      path: "blog",
+    },
   ];
 
   return (

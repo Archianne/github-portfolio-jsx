@@ -39,6 +39,7 @@ const StyledDiv = styled.div`
   }
 
   a {
+    font-weight: normal;
     text-decoration: none;
     color: ${(props) => props.theme.fontColor1};
   }
