@@ -3,7 +3,7 @@ import { Suspense } from "react";
 const Skills = () => {
   return (
     <Suspense fallback={<div>Loading</div>}>
-      <h1>Hi</h1>
+      <h1>In progress</h1>
     </Suspense>
   );
 };
