@@ -60,8 +60,16 @@ const StyledPosts = styled.article`
   h2,
   h3,
   h4 {
-    margin-top: 20px;
+    margin: 30px 0 30px 20px;
     color: ${(props) => props.theme.fontColor1};
+  }
+
+  hr {
+    margin-top: 16px;
+    background-color: ${(props) => props.theme.boxBorder} !important;
+    border: none;
+    height: 1px;
+    width: 100%;
   }
 
   .highlight {
