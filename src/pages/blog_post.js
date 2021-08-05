@@ -17,10 +17,11 @@ const BlogPost = ({ match }) => {
 
   return (
     <StyledPosts>
-      <Suspense fallback={<div>Loading</div>}>
+      <Suspense fallback={<div>Loading..</div>}>
         <div id="return">
           <Link to="/blog">Return</Link>
         </div>
+        <h1 id="title">{value.title}</h1>
         <Markup content={value.body_html} />
       </Suspense>
     </StyledPosts>
@@ -35,13 +36,24 @@ const StyledPosts = styled.article`
     margin-bottom: 40px;
   }
 
+  #title {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    box-shadow: ${props => props.theme.fontColor1} 0px 1px 0px,
+    ${props => props.theme.fontColor1} 0px 1px 0px inset;
+  }
+  
   img {
-    width: 20px;
+    width: 100%;
+    margin: 10px 0;
+    box-shadow: ${props => props.theme.fontColor1} 0px 2px 8px 0px;
   }
 
   a {
     color: orange;
     text-decoration: none;
+    font-weight: bold;
   }
 
   h1,
@@ -50,5 +62,17 @@ const StyledPosts = styled.article`
   h4 {
     margin-top: 20px;
     color: ${(props) => props.theme.fontColor1};
+  }
+
+  .highlight {
+    background-color: ${(props) => props.theme.buttonBgHover};
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  code {
+    background-color: ${(props) => props.theme.buttonBgHover};
+    font-size: 12px;
+    color: red;
   }
 `;
