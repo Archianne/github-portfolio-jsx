@@ -40,14 +40,14 @@ const StyledPosts = styled.article`
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
-    box-shadow: ${props => props.theme.fontColor1} 0px 1px 0px,
-    ${props => props.theme.fontColor1} 0px 1px 0px inset;
+    box-shadow: ${(props) => props.theme.fontColor1} 0px 1px 0px,
+      ${(props) => props.theme.fontColor1} 0px 1px 0px inset;
   }
-  
+
   img {
     width: 100%;
     margin: 10px 0;
-    box-shadow: ${props => props.theme.fontColor1} 0px 2px 8px 0px;
+    box-shadow: ${(props) => props.theme.fontColor1} 0px 2px 8px 0px;
   }
 
   a {
@@ -74,5 +74,25 @@ const StyledPosts = styled.article`
     background-color: ${(props) => props.theme.buttonBgHover};
     font-size: 12px;
     color: red;
+  }
+
+  .readme-overview {
+    ${(props) => props.theme.buttonBg};
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: ${(props) => props.theme.fontColor1} 0px 15px 20px -20px;
+
+    img {
+      width: 20px;
+      margin-right: 10px;
+      box-shadow: none;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `;
