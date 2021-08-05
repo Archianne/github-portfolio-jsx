@@ -8,7 +8,7 @@ import Line from "../components/_Styled/line";
 const Blog = () => {
   const URL = `https://dev.to/api/articles?username=archianne`;
   const [value] = useFetch(URL);
-
+console.log(value)
   const mapValues =
     Array.isArray(value) &&
     value.slice(0, 10).map((item) => {
@@ -26,7 +26,7 @@ const Blog = () => {
 
           <Line />
           <Link
-            to={{ pathname: `/post/${item.slug}`, id: { id: item.id } }}
+            to={{ pathname: `/post/${item.slug}/${item.id}`, id: { id: item.id } }}
             replace
           >
             See more
