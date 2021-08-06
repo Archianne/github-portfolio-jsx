@@ -46,8 +46,8 @@ const StyledPosts = styled.article`
 
   img {
     width: 100%;
-    margin: 10px 0;
-    box-shadow: ${(props) => props.theme.fontColor1} 0px 2px 8px 0px;
+    margin: 30px 0;
+    box-shadow: ${(props) => props.theme.fontColor1} 0px 1px 4px;
   }
 
   a {
@@ -65,7 +65,7 @@ const StyledPosts = styled.article`
   }
 
   hr {
-    margin-top: 16px;
+    margin: 30px 0;
     background-color: ${(props) => props.theme.boxBorder} !important;
     border: none;
     height: 1px;
@@ -82,6 +82,12 @@ const StyledPosts = styled.article`
     background-color: ${(props) => props.theme.buttonBgHover};
     font-size: 12px;
     color: red;
+  }
+
+  span {
+    h1 {
+      font-size: 30px;
+    }
   }
 
   .readme-overview {
@@ -101,6 +107,11 @@ const StyledPosts = styled.article`
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0;
     }
   }
 `;
